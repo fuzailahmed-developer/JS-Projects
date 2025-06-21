@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    text-align: center;
+    flex-direction: column;
+    width: 415px;
+    height: 417px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.wrapper h1 {
+    margin-bottom: 15px;
+}
+.wrapper button{
+    padding: 10px 24px;
+    border: none;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+}
