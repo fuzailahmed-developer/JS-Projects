@@ -1,0 +1,33 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: black;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            font-weight: 500;
+            font-size: 18px;
+            padding: 10px 30px;
+            border-radius: 10px;
+            border: none;
+            margin-top: 10px;
+        }
