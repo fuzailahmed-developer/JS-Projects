@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        body{
+            background-color: #58A0C8;
+        }
+        .container {
+            max-width: 350px;
+            margin: 30px auto;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 10px;
+            padding: 20px 20px;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: rgba(255, 255, 255, 0.2) 0px 8px 24px;
+            background-color: #456882;
+        }
+
+        ul {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        li {
+            background-color: white;
+            border-radius: 5px;
+            list-style: inside;
+            padding: 5px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            span {
+                cursor: pointer;
+                font-size: 19px;
+                margin-left: 20px;
+                font-weight: bold;
+            }
+        }
+
+        .input-box {
+            display: flex;
+            height: 30px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            border-radius: 5px;
+            overflow: hidden;
+            input {
+                flex-grow: 1;
+                padding-left: 10px;
+                outline: none;
+                border: none;
+            }
+
+            button {
+                border: none;
+                cursor: pointer;
+                background-color: blue;
+                color: white;
+            }
+        }
+
+        ::placeholder {
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        .remove-all-btn {
+            margin-left: auto;
+            margin-top: auto;
+            button {
+                background-color: blue;
+                color: white;
+                border-radius: 3px;
+                border: none;
+                padding: 5px 10px;
+                cursor: pointer;
+            }
+        }
+        .remove-all-btn button{
+            display: none;
+        }
+        h1{
+            font-family: sans-serif;
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+        }
+        @media screen and (max-width:400px) {
+            h1{
+                font-size: 24px;
+            }
+        }
+        @media screen and (max-width:300px) {
+            .input-box{
+                flex-direction: column;
+                gap: 10px;
+                height: unset;
+                border-radius: unset;
+                input{
+                    height: 30px;
+                    border-radius: 3px;
+                }
+                button{
+                    border-radius: 3px;
+                    padding: 5px;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>ToDo With Local Storage</h1>
+    <div class="container">
+        <div class="input-box">
+            <input type="text" autofocus placeholder="Add Your Item">
+            <button onclick="addItem()">Add Item</button>
+        </div>
+
+        <ul>
+            <!-- <li>banana <div class="li-container"><span>&times;</span> <span>&#9998;</span></div></li> -->
+
+        </ul>
+        <div class="remove-all-btn">
+            <button onclick="removeAll()">Remove All</button>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
