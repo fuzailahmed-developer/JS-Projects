@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employ System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Employ System</h1>
+    <div class="container">
+        <!-- add employ  -->
+        <div class="box box-1">
+            <div class="input-box input-box-1">
+                <input type="number" autocomplete="off" autofocus placeholder="Enter Employ Id">
+                <input type="text" placeholder="Enter Employ Name" autocomplete="off">
+                <input type="text" placeholder="Enter Employ Role" autocomplete="off">
+            </div>
+            <div class="data-div">
+                <!-- <ul>
+                    
+                    <li>id : 3</li>
+                    <li>Name : Ali</li>
+                    <li>Role : Developer</li>
+                </ul> -->
+            </div>
+            <div class="removeAll-btn">
+                <button onclick="removeAll()">Remove All</button>
+                <button onclick="addEmploy()">Add Employ</button>
+            </div>
+        </div>
+        <!-- get employ  -->
+        <div class="box box-2">
+            <div class="input-box input-box-2">
+                <input type="id" autocomplete="off" placeholder="Enter Employ Id">
+            </div>
+            <div class="print-data">
+                
+            </div>
+            <div class="btn-2">
+                <button onclick="getData()">Get Employ</button>
+            </div>
+        </div>
+        <!-- Delete Employ -->
+        <div class="box box-3">
+            <div class="btn-total">
+                <button onclick="totalEmp()">Total Employ</button>
+            </div>
+            <p></p>
+        </div>
+        <!-- total employ  -->
+        <!-- <div class="box box-4">
+            .
+        </div> -->
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
+
+<!-- https://localemp-system.surge.sh/ -->
