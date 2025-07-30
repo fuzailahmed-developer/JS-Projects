@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .input {
+            display: flex;
+            border: none;
+            border-radius: 10px;
+            border: 1px solid white;
+            overflow: hidden;
+            background-color: black;
+
+            input {
+                color: white;
+                background-color: transparent;
+                height: 30px;
+                padding: 0 30px;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                font-size: 12px;
+            }
+
+            button {
+                color: white;
+                background-color: transparent;
+                cursor: pointer;
+                border: none;
+                padding: 0 10px;
+            }
+        }
+
+        p {
+            color: white;
+            font-size: 12px;
+            margin: 10px 0 7px 0;
+            text-align: center;
+            color: white;
+            display: none;
+        }
+
+        ::placeholder {
+            color: rgba(255, 255, 255, 0.774);
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input">
+            <input type="password" placeholder="Password" autofocus>
+            <button><i class="bi bi-eye-slash"></i></button>
+        </div>
+        <p>Password Strength is Weak</p>
+    </div>
+
+    <script>
+
+        let getInput = document.querySelector("input")
+        let getButton = document.querySelector("button")
+        let getP = document.querySelector("p")
+        let inputBox = document.querySelector(".input")
+
+
+
+        getInput.addEventListener("input", (e) => {
+            let hasNum = /[0-9]/.test(getInput.value)
+            let hasSymbol = /[^0-9a-zA-z]/.test(getInput.value)
+
+            if (e.target.value.length < 4) {
+                getP.style.display = "block"
+                getP.innerHTML = "Password Strength is Weak"
+                getP.style.color = "red"
+                inputBox.style.border = "1px solid red"
+            }
+
+            if (e.target.value.length > 6 && hasNum) {
+                getP.style.display = "block"
+                getP.innerHTML = "Password Strength is Medium"
+                getP.style.color = "yellow"
+                inputBox.style.border = "1px solid yellow"
+            }
+
+            if (e.target.value.length > 8 && hasSymbol) {
+                getP.style.display = "block"
+                getP.innerHTML = "Password Strength is Strong"
+                getP.style.color = "lightGreen"
+                inputBox.style.border = "1px solid lightGreen"
+            }
+
+
+
+        })
+
+        getButton.addEventListener("mousedown", (e) => {
+            if (getInput.value != "") {
+                getInput.setAttribute("type", "text")
+                getButton.innerHTML = `<i class="bi bi-eye"></i>`
+            }
+        })
+        getButton.addEventListener("mouseup", (e) => {
+            getInput.setAttribute("type", "password")
+            getButton.innerHTML = `<i class="bi bi-eye-slash"></i>`
+        })
+
+    </script>
+</body>
+
+</html>
+
+
+<!-- password-strength.surge.sh -->
