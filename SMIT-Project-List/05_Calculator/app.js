@@ -2,7 +2,6 @@ let getBtn = document.querySelectorAll("button")
 let getInput = document.querySelector("input")
 let numberInputs = document.querySelectorAll('.number')
 
-
 function number(num) {
     let value = num
     getInput.value += value
@@ -14,9 +13,24 @@ function count(c) {
     }
 }
 function opt(o) {
-    if (getInput.value.trim() != "" ) {
+    if (getInput.value.trim() != "") {
         let operator = o;
-        getInput.value += operator
+       switch (true) {
+        case getInput.value.at(-1) == "+":
+            break;
+        case getInput.value.at(-1) == "-":
+            break;
+        case getInput.value.at(-1) == "*":
+            break;
+        case getInput.value.at(-1) == "/":
+            break;
+        case getInput.value.at(-1) == "%":
+            break;
+       
+        default:
+            getInput.value += operator
+            break;
+       }
     }
 }
 function clearAll() {
