@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="../images/Logo.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+
+
+    <section>
+        <div class="container">
+            <!-- side bar -->
+            <div class="side_bar">
+                <h2>🚀 Dashboard</h2>
+                <span onclick="menuOpen(false)"><i class="fa-solid fa-xmark"></i></span>
+                <button onclick="checkMenuState(true)">Add Employ <i class="fa-solid fa-plus"></i></button>
+                <button onclick="checkMenuState(false)">Employs <i class="fa-solid fa-user"></i></button>
+            </div>
+
+            <div class="menu" onclick="menuOpen(true)">
+                <i class="fa-solid fa-bars" ></i>
+            </div>
+
+            <main class="content">
+                <!-- Add Employee -->
+                <section id="addPage" class="page">
+                    <h1>Add Employee</h1>
+                    <div id="employeeForm">
+                        <input type="text" placeholder="Employee Name" id="name" required name="name">
+                        <input type="text" placeholder="Role" id="role" required name="role">
+                        <input type="number" placeholder="Salary" id="salary" required name="salary">
+                        <button type="submit" id="btn" onclick="addEmploys()">Save Employee</button>
+                    </div>
+                </section>
+
+                <!-- Employee List -->
+                <section id="listPage" class="page hidden">
+                    <h1>Employees List</h1>
+                    <input type="text" placeholder="Search Employ by Name" id="search">
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Role</th>
+                                    <th>Salary</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="employeeTable">
+                                <tr>
+                                    <td>Ali</td>
+                                    <td>Developer</td>
+                                    <td>3000</td>
+                                    <td>
+                                        <button class="edit_btn">edit</button>
+                                        <button class="delete_btn">delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+            </main>
+
+        </div>
+    </section>
+
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

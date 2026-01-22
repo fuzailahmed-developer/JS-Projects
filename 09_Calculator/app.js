@@ -1,29 +1,31 @@
-let getBtn = document.querySelectorAll("button")
-let getInput = document.querySelector("input")
-let numberInputs = document.querySelectorAll('.number')
 
+let inputVal = document.querySelector(".input-field input")
 
-function number(num) {
-    let value = num
-    getInput.value += value
+function number(num){
+    inputVal.value += num
 }
-
-function count(c) {
-    if (getInput.value.trim() != "") {
-        getInput.value = eval(getInput.value)
+function opt(operator){
+    let arr = ["+","-","/","*"]
+    switch (true) {
+        case arr.includes(inputVal.value.at(-1)):
+            break;
+        case inputVal.value <= 0:
+            break;   
+        default:
+            inputVal.value += operator
+            break;
     }
 }
-function opt(o) {
-    if (getInput.value.trim() != "" ) {
-        let operator = o;
-        getInput.value += operator
+
+function count(){
+    if (inputVal.value) {
+        inputVal.value = eval(inputVal.value)
     }
 }
-function clearAll() {
-    getInput.value = ""
-    getInput.focus()
+function clearAll(){
+    inputVal.value = ""
+    inputVal.focus()
 }
-function del() {
-    getInput.value = getInput.value.slice(0, -1)
-
+function del(){
+    inputVal.value = inputVal.value.slice(0,-1)
 }
