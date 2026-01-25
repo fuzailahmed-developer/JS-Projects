@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(73, 163, 0, 0.07);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+main{
+  padding: 16px;
+}
+
+.title{
+  font-size: 4rem;
+  color: #48A300;
+  text-align: center;
+  margin-block: 20px 30px;
+  span{
+    color: #61481C;
+  }
+}
+
+.app-container{
+  background-color: #FBFBFB;
+  max-width: 660px;
+  margin-inline: auto;
+  border-radius: 15px;
+  padding: 32px 48px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  span{
+    font-size: 28px;
+    font-weight: bold;
+  }
+}
+
+.progress_label{
+  color: #858585;
+  font-size: 14px;
+  margin-block: 32px 20px;
+}
+
+.progress_bar{
+  background-color: rgba(73, 163, 0, 0.1);
+  height: 30px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress{
+  border-radius: 15px;
+  background-color: #48A300;
+  transition: all 0.3s linear;
+  width: 0%;
+  height: 100%;
+}
+
+.progress_bar_text{
+  color: white;
+  position: absolute;
+  top: 7px;
+  left: 20px;
+  font-size: 12px;
+}
+
+.error-label{
+  color: #FF5151;
+  font-size: 14px;
+  opacity: 0;
+}
+
+.goal-container{
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  border-radius: 17px;
+  height: 82px;
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding-inline: 22px;
+}
+
+.custom-checkbox{
+  /* background-color: #48A300; */
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(97, 72, 28, 0.3);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goal-input{
+  outline: none;
+  border: none;
+  height: 100%;
+  width: 100%;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.goal-input::placeholder{
+  color: #D9D9D9;
+  font-size: 18px;
+}
+
+.app-container > .goal-container:nth-child(6) {
+  margin-block: 46px;
+}
+
+.quote,.madeby{
+  text-align: center;
+  font-weight: 500;
+}
+.quote{
+  margin-block: 54px 66px;
+}
+
+.madeby{
+  font-size: 14px;
+  font-weight: 500;
+  color: #858585;
+}
+
+.completed{
+  text-decoration: line-through;
+  color: #48A300;
+}
+
+@media screen and (max-width:768px) {
+ 
+  .title{
+    font-size: 42px;
+  }
+
+  .app-container{
+    padding: 16px 32px;
+  }
+
+}
