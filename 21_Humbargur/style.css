@@ -1,0 +1,287 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #F6F0EB;
+    overflow-x: hidden;
+}
+
+main {
+    padding-inline: 24px;
+}
+
+.navbar_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1290px;
+    margin-inline: auto;
+    padding: 25px 20px;
+}
+
+nav ul {
+    display: flex;
+    gap: 60px;
+}
+
+nav ul li a {
+    position: relative;
+    font-size: 20px;
+    color: #492118;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 4px;
+    background-color: red;
+    transition: width 0.3s linear;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+header {
+    background-color: white;
+}
+
+.mobile_menu {
+    width: 69px;
+    height: 69px;
+    background-color: white;
+    border-radius: 0px 0px 0px 100%;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile_menu i {
+    font-size: 20px;
+    position: relative;
+    top: 17px;
+    left: 27px;
+}
+
+
+.mobile_menu_list {
+    position: absolute;
+    top: 10px;
+    right: -240px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    padding-top: 30px;
+    border-radius: 3px;
+    z-index: 999;
+    display: none;
+    transition: all 0.3s linear;
+}
+
+.mobile_menu_list li a {
+    color: #492118;
+    font-weight: bolder;
+}
+
+.mobile_menu_list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mobile_menu_list i {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+
+.hero_section {
+    max-width: 1290px;
+    margin-inline: auto;
+    margin-top: 100px;
+}
+
+.hero_section img {
+    width: 100%;
+}
+
+.top_para {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #492118;
+    padding-block: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px
+}
+
+.container h2 {
+    margin-block: 40px;
+    font-size: 48px;
+    color: #492118;
+    font-weight: 700;
+}
+
+footer{
+    max-width: 1290px;
+    padding: 0 24px;
+    margin-inline: auto;
+}
+
+.footer_link{
+    text-align: end;
+    margin-block: 60px;
+    a{
+        font-size: 30px;
+        color: black;
+        font-weight: bold;
+    }
+}
+
+footer p {
+    color: #858585;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 64px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width:1300px) {
+    nav ul {
+        gap: 40px;
+
+        li {
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .top_para {
+        font-size: 22px;
+    }
+
+    .container {
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .container img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:992px) {
+    nav ul {
+        gap: 25px;
+
+        li {
+            a {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .top_para {
+        font-size: 20px;
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+
+}
+
+
+@media screen and (max-width:768px) {
+    nav {
+        display: none;
+    }
+
+    .mobile_menu {
+        display: block;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background: #f6f0ebb7;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .navbar_container {
+        padding: 10px 20px;
+    }
+
+    .mobile_menu_list {
+        display: block;
+    }
+
+    .top_para {
+        font-size: 16px;
+    }
+
+    .container {
+        margin-top: 30px;
+    }
+
+    .hero_section {
+        margin-top: 50px;
+    }
+
+    .container h2 {
+        font-size: 20px;
+    }
+
+    .footer_link{
+        margin-block: 30px;
+        a{
+            font-size: 18px;
+        }
+    }
+
+    footer p{
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+}

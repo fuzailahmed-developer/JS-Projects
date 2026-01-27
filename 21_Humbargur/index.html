@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie</title>
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="go_to_top">
+        <div class="navbar_container">
+            <div class="logo">
+                <img src="./images/logo.svg" alt="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#top_picks">Top Picks</a></li>
+                    <li><a href="#whopper">Whopper</a></li>
+                    <li><a href="#stunner_menu">Stunner Menu</a></li>
+                    <li><a href="#New_foodie_collection">New Foodie Collection</a></li>
+                    <li><a href="#deal_of_the_day">Deal of the Day</a></li>
+                </ul>
+            </nav>
+            <div class="mobile_menu" onclick="menuState(true)">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="mobile_menu_list">
+            <i class="fa-solid fa-x" onclick="menuState(false)"></i>
+            <ul>
+                <li><a href="#top_picks">Top Picks</a></li>
+                <li><a href="#whopper">Whopper</a></li>
+                <li><a href="#stunner_menu">Stunner Menu</a></li>
+                <li><a href="#New_foodie_collection">New Foodie Collection</a></li>
+                <li><a href="#deal_of_the_day">Deal of the Day</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero_section">
+            <img src="./images/hero-image.png" alt="">
+            <p class="top_para">
+                Well, You can’t resist anymore!
+            </p>
+        </div>
+
+        <div class="container" id="top_picks">
+            <h2>Top Picks</h2>
+            <img src="./images/burger-1.png" alt="burger-img">
+        </div>    
+        <div class="container" id="whopper">
+            <h2>Whopper</h2>
+            <img src="./images/burger-2.png" alt="burger-img">
+        </div>    
+        <div class="container" id="stunner_menu">
+            <h2>Stunner Menu</h2>
+            <img src="./images/burger-3.png" alt="burger-img">
+        </div>    
+        <div class="container" id="New_foodie_collection">
+            <h2>New Foodie Collection</h2>
+            <img src="./images/burger-4.png" alt="burger-img">
+        </div>    
+        <div class="container" id="deal_of_the_day">
+            <h2>Deal of the Day</h2>
+            <img src="./images/burger-5.png" alt="burger-img">
+        </div>    
+
+    </main>
+
+    <footer>
+
+        <div class="footer_link">
+            <a href="#go_to_top">Go To Top</a>
+        </div>
+
+        <p>
+            Made by ❤️ Fuzail Selat
+        </p>
+
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+<!-- fuzail-responsive_hum-burgur.surge.sh -->
