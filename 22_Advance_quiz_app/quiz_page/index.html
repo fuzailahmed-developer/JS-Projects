@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+            <div class="header">
+                <div>
+                    <img src="../images/quiz-img.png" alt="logo">
+                </div>
+                <div class="music_icon">
+                    <!-- <i class="fa-solid fa-volume-high"></i> -->
+                     <i class="fa-solid fa-volume-xmark"></i>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="question_count">
+                    02/25
+                </div>
+                <div class="question">
+                    <p>
+                        Inside which HTML element do we put the JavaScript?
+                    </p>
+                </div>
+                <div class="timer">
+                    00:30
+                </div>
+            </div>
+            <div class="questions_opt">
+                <ul>
+                    <li class="questions_opt_li">&lt;js&gt;</li>
+                    <li class="questions_opt_li">
+                        <span class="text">
+                            &lt;scripting&gt;
+                        </span>
+                        <!-- <div class="wrong_answer_div">
+                            <span>You chose</span>
+                            <i class="fa-solid fa-circle-xmark"></i>
+                        </div> -->
+                    </li>
+                    <li class="questions_opt_li">&lt;javascript&gt;</li>
+                    <li class="questions_opt_li">
+                        <span class="text">
+                            &lt;script&gt;
+                        </span>
+                        <!-- <span class="correct_answer_icon">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </span> -->
+                    </li>
+                </ul>
+            </div>
+            <div class="next_question">
+                <button onclick="nextQuestion()">Next ></button>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
